@@ -21,6 +21,7 @@
   <main class="layout">
     <aside class="sidebar panel">
       <h2>学习任务</h2>
+      <div class="category-tabs"><button id="car-category" class="category-tab active">捡球小车</button><button id="basic-category" class="category-tab">基础练习</button></div>
       <div id="lesson-list" class="lesson-list"></div>
       <div class="progress-wrap">
         <div class="progress-label"><span>学习进度</span><strong id="progress-text">0 / 3</strong></div>
@@ -44,7 +45,7 @@
       </section>
 
       <section class="simulator panel">
-        <div class="section-title"><h3>小车模拟场地</h3><span id="sim-message">等待运行代码</span></div>
+        <div class="section-title"><h3 id="visual-title">小车模拟场地</h3><span id="sim-message">等待运行代码</span></div>
         <canvas id="field" width="760" height="390"></canvas>
         <div class="telemetry">
           <span>位置 <b id="position">(80, 195)</b></span>
@@ -75,6 +76,7 @@
 
   <script src="simulator.js"></script>
   <script src="python-runner.js"></script>
+  <script src="basic-runner.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

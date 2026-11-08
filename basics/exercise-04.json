@@ -1,0 +1,1 @@
+{"id":"exercise-04","number":4,"title":"变量和命名","description":"给数据取一个名字，之后就能通过名字使用它。","goal":"创建并使用变量","starter":"cars = 3\nballs = 10\ntotal = cars + balls\nprint(total)","hint":"把 cars 或 balls 改成新的数字，观察 total 如何变化。","question":"total 这个变量保存了什么？"}

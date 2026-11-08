@@ -1,0 +1,1 @@
+{"id":"exercise-03","number":3,"title":"数字和数学计算","description":"让 Python 帮你计算加法、减法、乘法和除法。","goal":"完成三种计算","starter":"print(2 + 3)\nprint(10 - 4)\nprint(6 * 7)\nprint(20 / 5)","hint":"先预测四行结果，再点击运行。然后把 2、3 改成你自己的数字。","question":"6 * 7 的结果是多少？"}

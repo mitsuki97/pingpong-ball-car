@@ -1,0 +1,1 @@
+{"id":"exercise-05","number":5,"title":"更多的变量和打印","description":"把变量放进文字中，输出更完整的信息。","goal":"打印带变量的句子","starter":"name = \"小车\"\nspeed = 30\nprint(f\"{name} 当前速度是 {speed}\")","hint":"把 name 改成你喜欢的名字，把 speed 改成 50。","question":"speed 改变后，输出的句子哪里会变化？"}

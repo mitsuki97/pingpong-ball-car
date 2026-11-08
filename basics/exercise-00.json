@@ -1,0 +1,1 @@
+{"id":"exercise-00","number":0,"title":"准备工作","type":"setup","description":"熟悉编辑器、终端和 Python 文件。先确认自己知道代码在哪里写、如何运行。","goal":"完成运行环境检查","starter":"# Exercise 0 不要求写复杂代码\n# 请确认：我能打开编辑器、保存 .py 文件、运行代码","hint":"先读完三项检查，再点击运行。","question":"Python 代码通常保存为什么后缀？"}

@@ -1,0 +1,1 @@
+{"id":"exercise-01","number":1,"title":"第一个程序","description":"使用 print() 把文字显示出来。先照着示例输入，再改一句话。","goal":"输出两行文字","starter":"print(\"Hello, Python!\")\nprint(\"我正在学习编程。\")","hint":"print 的括号里放要显示的文字，文字需要用引号包起来。","question":"运行后，哪两行文字会出现在结果里？"}
