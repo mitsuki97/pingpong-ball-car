@@ -13,6 +13,5 @@ class BasicRunner {
     this.visual(lesson, logs, vars); return {ok:true,logs,warning:'基础练习可视化已显示执行流程和状态变化。'};
   }
   visual(lesson, items, vars={}) { const c=this.ctx,w=this.canvas.width,h=this.canvas.height; c.clearRect(0,0,w,h); c.fillStyle='#f4f8f8'; c.fillRect(0,0,w,h); c.fillStyle='#167c80'; c.font='bold 22px Microsoft YaHei'; c.fillText(`Exercise ${lesson.number} · ${lesson.title}`,28,42); const card=(x,y,width,height,title,rows)=>{c.fillStyle='#fff';c.strokeStyle='#cde2da';c.lineWidth=1;c.roundRect(x,y,width,height,10);c.fill();c.stroke();c.fillStyle='#173042';c.font='bold 15px Microsoft YaHei';c.fillText(title,x+16,y+27);c.font='14px Consolas';c.fillStyle='#45606b';rows.forEach((row,i)=>c.fillText(String(row),x+16,y+55+i*25));}; const variableRows=Object.entries(vars).map(([k,v])=>`${k} = ${v}`); const outputRows=items.filter(x=>!String(x).startsWith('注释：')).slice(-5); card(28,90,220,220,'当前代码步骤',items.slice(0,6)); card(270,90,220,220,'变量状态',variableRows.length?variableRows:['暂无变量']); card(512,90,215,220,'输出结果',outputRows.length?outputRows:['等待运行']); }
-  }
 }
 window.BasicRunner=BasicRunner;
