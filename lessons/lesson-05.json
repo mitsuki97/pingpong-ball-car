@@ -1,1 +1,10 @@
-{"id":"lesson-05","title":"找到球并完成捡球","description":"把传感器、条件判断和函数组合起来：发现球后靠近、停止，完成一次捡球任务。","goal":"完成一次模拟捡球","starter":"import time\n\ndef collect_ball():\n    distance = sensor.distance()\n    if distance < 120:\n        car.left(45)\n        time.sleep(0.5)\n    else:\n        car.forward(35)\n        time.sleep(1)\n    car.stop()\n\ncollect_ball()","hint":"先运行示例，再把 forward 的速度 35 改成 60，比较接近球的速度。","check":"sensor","question":"为什么要先读取 distance，再决定前进还是转弯？"}
+{
+  "id": "lesson-05",
+  "title": "找到球并完成捡球",
+  "description": "把传感器、条件判断和函数组合起来：发现球后靠近、停止，完成一次捡球任务。",
+  "goal": "完成一次模拟捡球",
+  "starter": "import time\n\nfor i in range(4):\n    distance = sensor.distance()\n    if distance < 120:\n        car.stop()\n        time.sleep(0.5)\n    else:\n        car.forward(35)\n        time.sleep(0.5)\n\ncar.stop()",
+  "hint": "先运行示例，再把 forward 的速度 35 改成 60，比较接近球的速度。",
+  "check": "sensor",
+  "question": "为什么要先读取 distance，再决定前进还是转弯？"
+}
