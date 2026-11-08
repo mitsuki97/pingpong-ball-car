@@ -1,0 +1,10 @@
+{
+  "id": "lesson-01",
+  "title": "让小车前进和停止",
+  "description": "先学会调用已经准备好的小车指令。修改速度参数，观察动作有什么变化。",
+  "goal": "前进后停止",
+  "starter": "import time\n\n# 让小车以较慢速度前进\ncar.forward(10)\ntime.sleep(2)   # 保持前进 2 秒\ncar.stop()",
+  "hint": "括号里的 50 是速度参数。试试把它改成 20 或 80。",
+  "check": "forward",
+  "question": "car.forward(50) 中的 50 代表什么？"
+}

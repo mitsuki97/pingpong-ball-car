@@ -1,0 +1,10 @@
+{
+  "id": "lesson-02",
+  "title": "用函数安排动作",
+  "description": "把一组动作放进函数里，之后只调用函数名就能重复执行。",
+  "goal": "用函数完成路线",
+  "starter": "import time\n\n# 把一组动作放进函数\ndef go_to_ball():\n    car.forward(30)\n    time.sleep(1)\n    car.right(30)\n\n# 调用函数，让小车执行动作\ngo_to_ball()\ncar.stop()",
+  "hint": "函数体里的代码要缩进。先运行示例，再把速度改成 70。",
+  "check": "forward",
+  "question": "为什么函数体里的两行代码要缩进？"
+}

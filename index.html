@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>捡球小车 · Python 练习场</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">ESP32 · Python 模拟练习</p>
+      <h1>捡球小车练习场</h1>
+    </div>
+    <div class="top-actions">
+      <span id="py-status" class="status">正在准备 Python…</span>
+      <button id="export-btn" class="secondary">导出代码</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar panel">
+      <h2>学习任务</h2>
+      <div id="lesson-list" class="lesson-list"></div>
+      <div class="progress-wrap">
+        <div class="progress-label"><span>学习进度</span><strong id="progress-text">0 / 3</strong></div>
+        <div class="progress"><span id="progress-bar"></span></div>
+      </div>
+      <div class="help-card">
+        <strong>卡住了吗？</strong>
+        <p>先看提示，再试一次。如果还是不清楚，可以通过微信联系陪练。</p>
+        <span id="help-count">本关可请求帮助 2 次</span>
+      </div>
+    </aside>
+
+    <section class="workspace">
+      <section class="lesson-header panel">
+        <div>
+          <p class="eyebrow" id="lesson-kicker">第 1 关</p>
+          <h2 id="lesson-title">让小车前进和停止</h2>
+          <p id="lesson-description"></p>
+        </div>
+        <div class="lesson-goal"><span>本关目标</span><strong id="lesson-goal"></strong></div>
+      </section>
+
+      <section class="simulator panel">
+        <div class="section-title"><h3>小车模拟场地</h3><span id="sim-message">等待运行代码</span></div>
+        <canvas id="field" width="760" height="390"></canvas>
+        <div class="telemetry">
+          <span>位置 <b id="position">(80, 195)</b></span>
+          <span>速度 <b id="speed-value">0</b></span>
+          <span>方向 <b id="heading">向右</b></span>
+          <span>传感器 <b id="sensor-value">—</b></span>
+        </div>
+      </section>
+
+      <section class="code-panel panel">
+        <div class="section-title"><h3>你的 Python 代码</h3><span id="run-time">第 1 步：直接点击“运行代码”</span></div>
+        <p class="first-step">第一次使用？先不要改代码，点击下面的“运行代码”，观察小车动作；然后只改 <code>10</code> 这个数字，再运行一次。</p>
+        <textarea id="code-editor" spellcheck="false"></textarea>
+        <div class="code-actions">
+          <button id="run-btn" class="primary">▶ 运行代码</button>
+          <button id="reset-btn" class="secondary">恢复示例</button>
+          <button id="step-btn" class="secondary">单步提示</button>
+        </div>
+        <pre id="output" class="output">运行结果会显示在这里。</pre>
+      </section>
+
+      <section class="feedback panel">
+        <div><h3 id="feedback-title">准备好了吗？</h3><p id="feedback-text">先读完任务说明，再运行右侧的示例代码。</p></div>
+        <button id="help-btn" class="link-button">我需要帮助</button>
+      </section>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+  <script src="simulator.js"></script>
+  <script src="python-runner.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

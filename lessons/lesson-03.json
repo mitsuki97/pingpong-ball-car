@@ -1,0 +1,10 @@
+{
+  "id": "lesson-03",
+  "title": "发现障碍物就转弯",
+  "description": "传感器会返回距离。用 if 判断距离是否太近，再让小车转弯。",
+  "goal": "检测障碍并避开",
+  "starter": "import time\n\n# 先读取传感器距离\ndistance = sensor.distance()\n\n# 距离太近就转弯，否则前进\nif distance < 120:\n    car.left(45)\n    time.sleep(1)\nelse:\n    car.forward(30)\n    time.sleep(1)\n\ncar.stop()",
+  "hint": "把 120 改成 180，看看小车什么时候开始转弯。",
+  "check": "sensor",
+  "question": "当 distance 小于 120 时，小车会执行哪一段代码？"
+}

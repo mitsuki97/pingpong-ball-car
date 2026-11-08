@@ -1,0 +1,1 @@
+{"id":"lesson-04","title":"用循环搜索乒乓球","description":"让小车重复执行一组动作，练习 for 循环。每次搜索后都向右转一点。","goal":"重复搜索 3 次","starter":"import time\n\nfor i in range(3):\n    car.forward(25)\n    time.sleep(0.5)\n    car.right(30)\n    time.sleep(0.3)\n\ncar.stop()","hint":"把 range(3) 改成 range(5)，小车会多搜索两次。","check":"forward","question":"range(3) 表示循环执行几次？"}
