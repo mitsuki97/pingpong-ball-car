@@ -8,7 +8,7 @@
 2. 使用 Live Server，或在终端运行 `python -m http.server 8000`。
 3. 浏览器打开 `http://localhost:8000`。
 
-页面会优先加载 Pyodide，在浏览器里执行 Python。若网络不可用，会自动进入演示模式，仍可运行基础小车指令。
+页面使用浏览器内的教学模拟器执行小车指令，不依赖后端服务或外部 Python 环境。
 
 ## 当前功能
 
