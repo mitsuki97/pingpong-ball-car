@@ -1,0 +1,1 @@
+{"id":"arduino-02","title":"摄像头发现乒乓球","description":"读取摄像头结果，观察第一人称视野和俯视地图。","goal":"看到摄像头识别结果","starter":"void setup() {\n  camera.begin();\n}\n\nvoid loop() {\n  BallInfo ball = camera.detectBall();\n  delay(500);\n}","hint":"拖动地图中的乒乓球，再运行一次，观察发现结果变化。"}

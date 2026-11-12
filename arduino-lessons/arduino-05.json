@@ -1,0 +1,1 @@
+{"id":"arduino-05","title":"舵机夹球","description":"使用舵机打开和闭合夹球器。","goal":"完成夹球动作","starter":"void setup() {\n  gripper.open();\n}\n\nvoid loop() {\n  car.forward(20);\n  delay(300);\n  gripper.close();\n  car.stop();\n  delay(500);\n}","hint":"夹球器只有在小车足够靠近球时才会显示成功。"}

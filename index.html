@@ -21,7 +21,7 @@
   <main class="layout">
     <aside class="sidebar panel">
       <h2>学习任务</h2>
-      <div class="category-tabs"><button id="basic-category" class="category-tab active">基础练习</button><button id="car-category" class="category-tab">捡球小车</button></div>
+      <div class="category-tabs"><button id="basic-category" class="category-tab active">基础练习</button><button id="car-category" class="category-tab">捡球小车</button><button id="arduino-category" class="category-tab">ESP32 仿真</button></div>
       <div id="lesson-list" class="lesson-list"></div>
       <div class="progress-wrap">
         <div class="progress-label"><span>学习进度</span><strong id="progress-text">0 / 3</strong></div>
@@ -54,10 +54,16 @@
           <span>传感器 <b id="sensor-value">—</b></span>
         </div>
       </section>
+      <section id="arduino-panel" class="arduino-panel panel" hidden>
+        <div class="arduino-views"><div><h3>俯视小地图</h3><canvas id="arduino-map" width="760" height="330"></canvas></div><div><h3>第一人称摄像头</h3><canvas id="arduino-camera" width="360" height="220"></canvas></div></div>
+        <div class="arduino-status"><span>状态 <b id="arduino-message">等待运行</b></span><span>位置 <b id="arduino-position">—</b></span><span>电机 L/R <b id="arduino-motors">0 / 0</b></span><span>舵机 <b id="arduino-servo">20° · 打开</b></span><span>视觉 <b id="arduino-ball">未发现</b></span><span>结果 <b id="arduino-success">未完成</b></span></div>
+        <div class="arduino-controls"><button id="arduino-run" class="primary">▶ 运行</button><button id="arduino-pause" class="secondary">暂停</button><button id="arduino-stop" class="secondary">停止</button><button id="arduino-step" class="secondary">单步</button><button id="arduino-reset" class="secondary">重置场景</button></div>
+        <p class="arduino-note">拖动俯视地图中的乒乓球，改变目标位置后再次运行。</p>
+      </section>
 
       <section class="code-panel panel">
-        <div class="section-title"><h3>你的 Python 代码</h3><span id="run-time">第 1 步：直接点击“运行代码”</span></div>
-        <p class="first-step">第一次使用？先不要改代码，点击下面的“运行代码”，观察小车动作；然后只改 <code>10</code> 这个数字，再运行一次。</p>
+        <div class="section-title"><h3 id="code-title">你的 Python 代码</h3><span id="run-time">第 1 步：直接点击“运行代码”</span></div>
+        <p id="first-step" class="first-step">第一次使用？先不要改代码，点击下面的“运行代码”，观察小车动作；然后只改 <code>10</code> 这个数字，再运行一次。</p>
         <textarea id="code-editor" spellcheck="false"></textarea>
         <div class="code-actions">
           <button id="run-btn" class="primary">▶ 运行代码</button>
@@ -77,6 +83,8 @@
   <script src="simulator.js"></script>
   <script src="python-runner.js"></script>
   <script src="basic-runner.js"></script>
+  <script src="arduino-simulator.js"></script>
+  <script src="arduino-runner.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,1 @@
+{"id":"arduino-04","title":"接近乒乓球","description":"反复执行转向和前进，让小车靠近球。","goal":"小车接近目标","starter":"void setup() {}\n\nvoid loop() {\n  BallInfo ball = camera.detectBall();\n  car.forward(45);\n  delay(400);\n  car.turnRight(10);\n  delay(200);\n}","hint":"拖动球到不同位置，重新运行观察路线。"}

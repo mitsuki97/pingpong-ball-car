@@ -1,0 +1,1 @@
+{"id":"arduino-06","title":"完整捡球程序","description":"综合摄像头、双电机和舵机，完成发现、接近和夹球。","goal":"显示捡球成功","starter":"void setup() {\n  camera.begin();\n  gripper.open();\n}\n\nvoid loop() {\n  BallInfo ball = camera.detectBall();\n  car.forward(70);\n  delay(250);\n  if (ball.distance < 80) {\n    car.stop();\n    gripper.close();\n    delay(300);\n  }\n}","hint":"先运行完整示例，再拖动球重新测试。"}

@@ -1,0 +1,1 @@
+{"id":"arduino-01","title":"GPIO 与电机测试","description":"先让双电机同时前进，再停止。","goal":"看到小车移动","starter":"void setup() {\n  pinMode(25, OUTPUT);\n  pinMode(26, OUTPUT);\n}\n\nvoid loop() {\n  car.forward(70);\n  delay(500);\n  car.stop();\n  delay(500);\n}","hint":"先运行示例，观察地图中的轨迹和左右电机状态。"}
